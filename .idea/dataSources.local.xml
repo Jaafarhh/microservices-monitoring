@@ -1,0 +1,17 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<project version="4">
+  <component name="dataSourceStorageLocal" created-in="IU-242.23726.103">
+    <data-source name="@localhost" uuid="a752819f-7bff-4865-abc2-ecd56610b963">
+      <database-info product="" version="" jdbc-version="" driver-name="" driver-version="" dbms="MYSQL" />
+      <schema-mapping />
+    </data-source>
+    <data-source name="@localhost [2]" uuid="6cadb76c-f8e5-458e-bba0-76090ea84fa0">
+      <database-info product="" version="" jdbc-version="" driver-name="" driver-version="" dbms="MYSQL" />
+      <schema-mapping />
+    </data-source>
+    <data-source name="@localhost [3]" uuid="d12a1149-6476-417f-89a5-dfb873f45c80">
+      <database-info product="" version="" jdbc-version="" driver-name="" driver-version="" dbms="MONGO" />
+      <schema-mapping />
+    </data-source>
+  </component>
+</project>
