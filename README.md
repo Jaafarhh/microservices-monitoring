@@ -22,7 +22,7 @@ A modern microservices monitoring platform using an ecommerce application as a d
 
 ## Table of Contents 📑
 - [🎯 Overview](#-overview)
-- [🔧 Tech Stack](#🔧-tech-stack)
+- [🔧 Tech Stack](#-tech-stack)
   - [Infrastructure & Deployment](#infrastructure--deployment)
   - [Authentication & Security](#authentication--security)
   - [Message Broker & Event Streaming](#message-broker--event-streaming)
@@ -31,14 +31,14 @@ A modern microservices monitoring platform using an ecommerce application as a d
   - [Frontend](#frontend)
   - [Monitoring & Observability Stack](#monitoring--observability-stack)
   - [Email Service](#email-service)
-- [📋 Prerequisites](#📋-prerequisites)
-- [🏗️ Architecture](#🏗️-architecture)
-- [🏗️ Architecture Details](#🏗️-arch-details)
+- [📋 Prerequisites](#-prerequisites)
+- [🏗️ Architecture](#-architecture)
+- [🏗️ Architecture Details](#-arch-details)
 - [🐋 Docker Image](#docker-image)
-- [🚀 Quick Start Guide](#🚀-quick-start-guide)
-- [📊 Monitoring Features](#📊-monitoring-features)
-- [🔐 Security](#🔐-security)
-- [🎥 Demo Video](#🎥-demo-video)
+- [🚀 Quick Start Guide](#-quick-start-guide)
+- [📊 Monitoring Features](#-monitoring-features)
+- [🔐 Security](#-security)
+- [🎥 Demo Video](#-demo-video)
 
 ## 🎯 Overview
 
