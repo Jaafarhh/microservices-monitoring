@@ -99,6 +99,14 @@ This platform demonstrates modern monitoring and observability practices for mic
 - **Spring Mail** - Email integration
 - **Mailtrap** - Email testing
 
+## 📋 Prerequisites
+
+- Java 21
+- Docker
+- Kubernetes (Kind)
+- kubectl
+- Node.js & npm
+
 ## 🏗️ Architecture
 ![diagram-export-12-25-2024-8_55_25-PM](https://github.com/user-attachments/assets/dc39853f-0822-4069-bd05-fb54c179d0c8)
 
@@ -212,13 +220,6 @@ This platform demonstrates modern monitoring and observability practices for mic
         └── docker-compose.yml
 </details>
 
-## 📋 Prerequisites
-
-- Java 21
-- Docker
-- Kubernetes (Kind)
-- kubectl
-- Node.js & npm
 
 <details id="docker-image">
   <summary><h2>🐋 Docker Image</h2></summary>
