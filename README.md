@@ -17,7 +17,7 @@
 ![Keycloak](https://img.shields.io/badge/Keycloak-23.0-orange.svg)
 ![Grafana](https://img.shields.io/badge/Grafana-10.2-orange.svg)
 
-A modern microservices monitoring platform using an ecommerce application as a demonstration case
+A microservices monitoring platform using an ecommerce microservice architecture as a demonstration case
 </div>
 
 ## Table of Contents 📑
