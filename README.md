@@ -21,7 +21,7 @@ A modern microservices monitoring platform using an ecommerce application as a d
 </div>
 
 ## Table of Contents 📑
-- [🎯 Overview](#🎯-overview)
+- [🎯 Overview](#-overview)
 - [🔧 Tech Stack](#🔧-tech-stack)
   - [Infrastructure & Deployment](#infrastructure--deployment)
   - [Authentication & Security](#authentication--security)
