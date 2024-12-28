@@ -111,7 +111,7 @@ This platform demonstrates modern monitoring and observability practices for mic
 ![diagram-export-12-25-2024-8_55_25-PM](https://github.com/user-attachments/assets/dc39853f-0822-4069-bd05-fb54c179d0c8)
 
 <details id="🏗️-arch-details">
-    <summary><h2>🏗️ Architecture Details (click to expand</h2></summary>
+    <summary><h2>🏗️ Architecture Details (click to expand)</h2></summary>
 
     └── Jaafarhh-microservices-manager/
         ├── docker/
@@ -222,7 +222,7 @@ This platform demonstrates modern monitoring and observability practices for mic
 
 
 <details id="docker-image">
-  <summary><h2>🐋 Docker Image</h2></summary>
+  <summary><h2>🐋 Docker Image (click to expand)</h2></summary>
 
     version: '4'
     services:
