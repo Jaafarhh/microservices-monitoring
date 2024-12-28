@@ -20,6 +20,26 @@
 A modern microservices monitoring platform using an ecommerce application as a demonstration case
 </div>
 
+## Table of Contents 📑
+- [🎯 Overview](#🎯-overview)
+- [🔧 Tech Stack](#🔧-tech-stack)
+  - [Infrastructure & Deployment](#infrastructure--deployment)
+  - [Authentication & Security](#authentication--security)
+  - [Message Broker & Event Streaming](#message-broker--event-streaming)
+  - [Databases](#databases)
+  - [Backend Services](#backend-services)
+  - [Frontend](#frontend)
+  - [Monitoring & Observability Stack](#monitoring--observability-stack)
+  - [Email Service](#email-service)
+- [🏗️ Architecture](#🏗️-architecture)
+- [🏗️ Architecture Details](#🏗️-arch-details)
+- [📋 Prerequisites](#📋-prerequisites)
+- [🐋 Docker Image](#docker-image)
+- [🚀 Quick Start Guide](#🚀-quick-start-guide)
+- [📊 Monitoring Features](#📊-monitoring-features)
+- [🔐 Security](#🔐-security)
+- [🎥 Demo Video](#🎥-demo-video)
+
 ## 🎯 Overview
 
 This platform demonstrates modern monitoring and observability practices for microservices architectures. It uses a sample ecommerce application to showcase:
@@ -54,7 +74,7 @@ This platform demonstrates modern monitoring and observability practices for mic
 - **MySQL** - Relational database for Order and Inventory Services
 - **Flyway** - Database migration tool
 
-### Backend Services (Spring Ecosystem)
+### Backend Services
 - **Spring Boot** - Application framework
 - **Spring Cloud** - Distributed system patterns
 - **Spring Cloud Gateway** - API Gateway
@@ -82,8 +102,8 @@ This platform demonstrates modern monitoring and observability practices for mic
 ## 🏗️ Architecture
 ![diagram-export-12-25-2024-8_55_25-PM](https://github.com/user-attachments/assets/dc39853f-0822-4069-bd05-fb54c179d0c8)
 
-<details>
-    <summary><h2>🏗️ Architecture Details (click to expand)</h2></summary>
+<details id="🏗️-arch-details">
+    <summary><h2>🏗️ Architecture Details (click to expand</h2></summary>
 
     └── Jaafarhh-microservices-manager/
         ├── docker/
@@ -191,6 +211,7 @@ This platform demonstrates modern monitoring and observability practices for mic
         ├── pom.xml
         └── docker-compose.yml
 </details>
+
 ## 📋 Prerequisites
 
 - Java 21
@@ -198,8 +219,9 @@ This platform demonstrates modern monitoring and observability practices for mic
 - Kubernetes (Kind)
 - kubectl
 - Node.js & npm
-<details>
-  <summary><h2>🐋 Docker Image (click to expand)</h2></summary>
+
+<details id="docker-image">
+  <summary><h2>🐋 Docker Image</h2></summary>
 
     version: '4'
     services:
