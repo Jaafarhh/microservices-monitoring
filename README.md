@@ -33,7 +33,7 @@ A microservices monitoring platform using an ecommerce microservice architecture
   - [Email Service](#email-service)
 - [📋 Prerequisites](#-prerequisites)
 - [🏗️ Architecture](#-architecture)
-- [🏗️ Architecture Details](#-arch-details)
+- [🏗️ Architecture Details](#-architecture-details-click-to-expand)
 - [🐋 Docker Image](#docker-image)
 - [🚀 Quick Start Guide](#-quick-start-guide)
 - [📊 Monitoring Features](#-monitoring-features)
