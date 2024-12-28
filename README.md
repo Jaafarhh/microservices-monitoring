@@ -148,10 +148,10 @@ This platform demonstrates modern monitoring and observability practices for mic
         │   └── angular.json
         ├── api-gateway/
         │   ├── pom.xml
-        │   └── src/main/java/com/alioui/   microservices/
+        │   └── src/main/java/com/alioui/microservices/
         │       └── main/
         │           ├── resources/
-        │           └── java/com/alioui/microservices/  gateway/
+        │           └── java/com/alioui/microservices/gateway/
         │               ├── config/
         │               ├── routes/
         │               └── ApiGatewayApplication.java
@@ -160,10 +160,10 @@ This platform demonstrates modern monitoring and observability practices for mic
         │   └── src/main/
         │       ├── resources/
         │       │   └── avro/
-        │       └── java/com/alioui/microservices/  notification/
+        │       └── java/com/alioui/microservices/notification/
         │           ├── config/
         │           ├── service/
-        │           └──     NotificationServiceApplication.java
+        │           └── NotificationServiceApplication.java
         ├── order-service/
         │   ├── pom.xml
         │   └── src/
@@ -171,7 +171,7 @@ This platform demonstrates modern monitoring and observability practices for mic
         │       │   ├── resources/
         │       │   │   ├── avro/
         │       │   │   └── db/migration/
-        │       │   └── java/com/alioui/microservices/  order/
+        │       │   └── java/com/alioui/microservices/order/
         │       │       ├── dto/
         │       │       ├── event/
         │       │       ├── controller/
@@ -180,13 +180,13 @@ This platform demonstrates modern monitoring and observability practices for mic
         │       │       ├── model/
         │       │       ├── service/
         │       │       ├── client/
-        │       │       └── OrderServiceApplication.    java
+        │       │       └── OrderServiceApplication.java
         │       └── test/
         │           ├── resources/
-        │           └── java/com/alioui/microservices/  order/
+        │           └── java/com/alioui/microservices/order/
         │               ├── stubs/
-        │               ├──     OrderServiceApplicationTests.java
-        │               └──     TestOrderServiceApplication.java
+        │               ├── OrderServiceApplicationTests.java
+        │               └── TestOrderServiceApplication.java
         ├── inventory-service/
         │   ├── pom.xml
         │   └── src/
@@ -200,22 +200,22 @@ This platform demonstrates modern monitoring and observability practices for mic
         │       │           ├── config/
         │       │           ├── model/
         │       │           ├── service/
-        │       │           └──     InventoryServiceApplication.java
-        │       └── test/java/com/alioui/   microservices/inventory/
-        │           ├──     InventoryServiceApplicationTests.java
-        │           └──     TestInventoryServiceApplication.java
+        │       │           └── InventoryServiceApplication.java
+        │       └── test/java/com/alioui/microservices/inventory/
+        │           ├── InventoryServiceApplicationTests.java
+        │           └── TestInventoryServiceApplication.java
         ├── product-service/
         │   ├── pom.xml
         │   └── src/main/
         │       ├── resources/
-        │       └── java/com/alioui/microservices/  product/
+        │       └── java/com/alioui/microservices/product/
         │           ├── dto/
         │           ├── controller/
         │           ├── repository/
         │           ├── config/
         │           ├── model/
         │           ├── service/
-        │           └── ProductServiceApplication.  java                                    
+        │           └── ProductServiceApplication.java                                    
         ├── pom.xml
         └── docker-compose.yml
 </details>
@@ -246,7 +246,7 @@ This platform demonstrates modern monitoring and observability practices for mic
           - "3306:3306"
         volumes:
           - ./data/mysql:/var/lib/mysql
-          - ./docker/mysql/init.sql:/   docker-entrypoint-initdb.d/init.sql
+          - ./docker/mysql/init.sql:/docker-entrypoint-initdb.d/init.sql
       zookeeper:
         image: confluentinc/cp-zookeeper:7.5.0
         hostname: zookeeper
@@ -268,8 +268,8 @@ This platform demonstrates modern monitoring and observability practices for mic
         environment:
           KAFKA_BROKER_ID: 1
           KAFKA_ZOOKEEPER_CONNECT: 'zookeeper:2181'
-          KAFKA_LISTENER_SECURITY_PROTOCOL_MAP:     PLAINTEXT:PLAINTEXT,PLAINTEXT_HOST:PLAINTEXT
-          KAFKA_ADVERTISED_LISTENERS: PLAINTEXT://  broker:29092,PLAINTEXT_HOST://localhost:9092
+          KAFKA_LISTENER_SECURITY_PROTOCOL_MAP: PLAINTEXT:PLAINTEXT,PLAINTEXT_HOST:PLAINTEXT
+          KAFKA_ADVERTISED_LISTENERS: PLAINTEXT://broker:29092,PLAINTEXT_HOST://localhost:9092
           KAFKA_OFFSETS_TOPIC_REPLICATION_FACTOR: 1
 
       schema-registry:
@@ -282,8 +282,8 @@ This platform demonstrates modern monitoring and observability practices for mic
           - "8085:8081"
         environment:
           SCHEMA_REGISTRY_HOST_NAME: schema-registry
-          SCHEMA_REGISTRY_KAFKASTORE_BOOTSTRAP_SERVERS  : 'broker:29092'
-          SCHEMA_REGISTRY_LISTENERS: http://    schema-registry:8081
+          SCHEMA_REGISTRY_KAFKASTORE_BOOTSTRAP_SERVERS : 'broker:29092'
+          SCHEMA_REGISTRY_LISTENERS: http://schema-registry:8081
       kafka-ui:
         container_name: kafka-ui
         image: provectuslabs/kafka-ui:latest
@@ -293,14 +293,14 @@ This platform demonstrates modern monitoring and observability practices for mic
           - broker
         environment:
           KAFKA_CLUSTERS_NAME: local
-          KAFKA_CLUSTERS_BOOTSTRAPSERVERS:  broker:29092
-          #      KAFKA_CLUSTERS_SCHEMAREGISTRY:     http://schema-registry:8081
+          KAFKA_CLUSTERS_BOOTSTRAPSERVERS: broker:29092
+          #      KAFKA_CLUSTERS_SCHEMAREGISTRY: http://schema-registry:8081
           DYNAMIC_CONFIG_ENABLED: 'true'
       keycloak-mysql:
         container_name: keycloak-mysql
         image: mysql:8
         volumes:
-          - ./volume-data/mysql_keycloak_data:/var/ lib/mysql
+          - ./volume-data/mysql_keycloak_data:/var/lib/mysql
         environment:
           MYSQL_ROOT_PASSWORD: root
           MYSQL_DATABASE: keycloak
@@ -321,13 +321,13 @@ This platform demonstrates modern monitoring and observability practices for mic
         ports:
           - "8181:8080"
         volumes:
-          - ./docker/keycloak/realms/:/opt/keycloak/    data/import/
+          - ./docker/keycloak/realms/:/opt/keycloak/data/import/
         depends_on:
           - keycloak-mysql
       loki:
         image: grafana/loki:main
         container_name: loki
-        command: [ "-config.file=/etc/loki/ local-config.yaml" ]
+        command: [ "-config.file=/etc/loki/local-config.yaml" ]
         ports:
           - "3100:3100"
       prometheus:
@@ -335,10 +335,10 @@ This platform demonstrates modern monitoring and observability practices for mic
         container_name: prometheus
         command:
           - --enable-feature=exemplar-storage
-          - --config.file=/etc/prometheus/prometheus.   yml
+          - --config.file=/etc/prometheus/prometheus.yml
         volumes:
-          - ./docker/prometheus/prometheus.yml:/etc/    prometheus/prometheus.yml:ro
-          - ./docker/prometheus/alerts.yml:/etc/    prometheus/alerts.yml:ro
+          - ./docker/prometheus/prometheus.yml:/etc/prometheus/prometheus.yml:ro
+          - ./docker/prometheus/alerts.yml:/etc/prometheus/alerts.yml:ro
         ports:
           - "9090:9090"
       alertmanager:
@@ -347,15 +347,15 @@ This platform demonstrates modern monitoring and observability practices for mic
         volumes:
           - ./docker/alertmanager:/etc/alertmanager
         command:
-          - '--config.file=/etc/alertmanager/   alertmanager.yml'
+          - '--config.file=/etc/alertmanager/alertmanager.yml'
         ports:
           - "9093:9093"
       tempo:
         image: grafana/tempo:2.2.2
         container_name: tempo
-        command: [ "-config.file=/etc/tempo.yaml" ]
+        command: ["-config.file=/etc/tempo.yaml"]
         volumes:
-          - ./docker/tempo/tempo.yml:/etc/tempo.    yaml:ro
+          - ./docker/tempo/tempo.yml:/etc/tempo.yaml:ro
           - ./data/tempo:/tmp/tempo
         ports:
           - "3110:3100"  # Tempo
@@ -364,7 +364,7 @@ This platform demonstrates modern monitoring and observability practices for mic
         image: grafana/grafana:10.1.0
         container_name: grafana
         volumes:
-          - ./docker/grafana:/etc/grafana/  provisioning/datasources:ro
+          - ./docker/grafana:/etc/grafana/provisioning/datasources:ro
         environment:
           - GF_AUTH_ANONYMOUS_ENABLED=true
           - GF_AUTH_ANONYMOUS_ORG_ROLE=Admin
