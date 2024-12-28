@@ -56,7 +56,6 @@ This platform demonstrates modern monitoring and observability practices for mic
 - **Kubernetes** - Container orchestration
 - **Docker** - Containerization
 - **Kind** - Local Kubernetes cluster
-- **Helm** - Package management for Kubernetes
 
 ### Authentication & Security
 - **Keycloak** - Identity and access management
