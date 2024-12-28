@@ -123,7 +123,7 @@ This platform demonstrates modern monitoring and observability practices for mic
         ├── k8s/
         │   ├── manifests/
         │   │   ├── applications/
-        │   │   ├── infrastructure/
+        │   │   └── infrastructure/
         │   └── kind/
         ├── frontend/
         │   ├── Dockerfile
@@ -143,7 +143,7 @@ This platform demonstrates modern monitoring and observability practices for mic
         │   │       ├── pages/
         │   │       │   ├── add-product/
         │   │       │   └── home-page/
-        │   │       ├── model/
+        │   │       └── model/
         │   └── angular.json
         ├── api-gateway/
         │   ├── pom.xml
