@@ -428,6 +428,10 @@ npm run start
 
 ## 🎥 Demo Video
 
+
+https://github.com/user-attachments/assets/00369554-725f-41fb-a08c-f890e759a6dc
+
+
 ---
 <div align="center">
 
