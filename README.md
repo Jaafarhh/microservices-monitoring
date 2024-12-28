@@ -1,5 +1,8 @@
+<div align="center">
+    
 [![Typing SVG](https://readme-typing-svg.demolab.com?font=Jersey+15&size=34&pause=1000&color=FFFFFF&center=true&width=435&lines=Microservices+Monitoring+Platform)](https://git.io/typing-svg)
 
+</div>
 <div align="center">
 
 ![Version](https://img.shields.io/badge/version-1.0.0-blue.svg)
