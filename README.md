@@ -380,10 +380,11 @@ git clone https://github.com/Jaafarhh/microservices-monitoring.git
 ### 2. Start Infrastructure
 ```bash
 # Create Kind cluster with pre-loaded images (use a bash terminal to run the .sh file)
-./k8s/kind/create-kind-cluster.sh
+cd ./k8s/kind
+./create-kind-cluster.sh
 
 # Navigate to the manifests directory
-cd k8s/manifests/
+cd ../manifests/
 
 # Deploy infrastructure components
 kubectl apply -f infrastructure.
@@ -394,7 +395,7 @@ kubectl apply -f applications
 ### 3. Access Services
 ```bash
 # API Gateway
-kubectl port-forward svc/gateway-service 9000:9000
+kubectl port-forward svc/api-gateway 9000:9000
 
 # Grafana
 kubectl port-forward svc/grafana 3000:3000
