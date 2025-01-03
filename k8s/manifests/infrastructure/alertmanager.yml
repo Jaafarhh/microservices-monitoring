@@ -1,0 +1,65 @@
+apiVersion: v1
+kind: Service
+metadata:
+  name: alertmanager
+spec:
+  selector:
+    app: alertmanager
+  ports:
+    - port: 9093
+      targetPort: 9093
+---
+apiVersion: apps/v1
+kind: Deployment
+metadata:
+  name: alertmanager
+spec:
+  replicas: 1
+  selector:
+    matchLabels:
+      app: alertmanager
+  template:
+    metadata:
+      labels:
+        app: alertmanager
+    spec:
+      containers:
+        - name: alertmanager
+          image: prom/alertmanager:v0.25.0
+          args:
+            - --config.file=/etc/alertmanager/alertmanager.yml
+          ports:
+            - containerPort: 9093
+          volumeMounts:
+            - name: alertmanager-config
+              mountPath: /etc/alertmanager
+      volumes:
+        - name: alertmanager-config
+          configMap:
+            name: alertmanager-config
+---
+apiVersion: v1
+kind: ConfigMap
+metadata:
+  name: alertmanager-config
+data:
+  alertmanager.yml: |
+    global:
+      smtp_smarthost: "sandbox.smtp.mailtrap.io:2525"
+      smtp_from: "alertmanager@microservices.com"
+      smtp_auth_username: "e738a5cf93f087"
+      smtp_auth_password: "0cd693f7b4a1ae"
+      resolve_timeout: 30s
+
+    route:
+      group_by: ["alertname"]
+      group_wait: 10s
+      group_interval: 10s
+      repeat_interval: 1h
+      receiver: "email-notifications"
+
+    receivers:
+      - name: "email-notifications"
+        email_configs:
+          - to: "testuser@microservices.com"
+            send_resolved: true
