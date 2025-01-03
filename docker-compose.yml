@@ -112,8 +112,18 @@ services:
       - --config.file=/etc/prometheus/prometheus.yml
     volumes:
       - ./docker/prometheus/prometheus.yml:/etc/prometheus/prometheus.yml:ro
+      - ./docker/prometheus/alerts.yml:/etc/prometheus/alerts.yml:ro
     ports:
       - "9090:9090"
+  alertmanager:
+    image: prom/alertmanager:v0.25.0
+    container_name: alertmanager
+    command:
+      - --config.file=/etc/alertmanager/alertmanager.yml
+    volumes:
+      - ./docker/alertmanager:/etc/alertmanager
+    ports:
+      - "9093:9093"
   tempo:
     image: grafana/tempo:2.2.2
     container_name: tempo

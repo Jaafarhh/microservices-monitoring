@@ -1,0 +1,34 @@
+groups:
+  - name: microservices_alerts
+    rules:
+      # Service Health Alerts
+      - alert: ServiceDown
+        expr: up == 0
+        for: 1m
+        annotations:
+          summary: "Service {{ $labels.application }} is down"
+          description: "Service {{ $labels.application }} has been down for more than 1 minute"
+
+      # High Response Time Alerts
+      - alert: HighResponseTime
+        expr: rate(http_server_requests_seconds_sum{uri!="/actuator/prometheus"}[1m]) / rate(http_server_requests_seconds_count{uri!="/actuator/prometheus"}[1m]) > 0.5
+        for: 2m
+        annotations:
+          summary: "High response time on {{ $labels.application }}"
+          description: "Service response time is above 500ms"
+
+      # Order Service Alerts
+      - alert: OrderProcessingFailures
+        expr: rate(resilience4j_circuitbreaker_calls_total{kind="failed", name="inventory"}[1m]) > 0
+        for: 1m
+        annotations:
+          summary: "Order processing failures in {{ $labels.application }}"
+          description: "Circuit breaker showing failures in order processing"
+
+      # Inventory Service Alerts
+      - alert: LowInventoryStock
+        expr: inventory_quantity < 10
+        for: 2m
+        annotations:
+          summary: "Low inventory for product {{ $labels.sku_code }}"
+          description: "Product {{ $labels.sku_code }} has inventory below 5 units"

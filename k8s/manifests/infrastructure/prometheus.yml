@@ -23,10 +23,15 @@ spec:
           volumeMounts:
             - name: prometheus-config
               mountPath: /etc/prometheus
+            - name: prometheus-alerts
+              mountPath: /etc/prometheus/rules
       volumes:
         - name: prometheus-config
           configMap:
             name: prometheus-configmap
+        - name: prometheus-alerts
+          configMap:
+            name: prometheus-alerts
 ---
 apiVersion: v1
 kind: Service
@@ -49,6 +54,15 @@ data:
     global:
       scrape_interval: 2s
       evaluation_interval: 2s
+
+    alerting:
+      alertmanagers:
+        - static_configs:
+            - targets:
+                - alertmanager.default.svc.cluster.local:9093
+
+    rule_files:
+      - /etc/prometheus/rules/*.yml
 
     scrape_configs:
       - job_name: 'api-gateway'
@@ -79,3 +93,42 @@ data:
           - targets: ['notification-service.default.svc.cluster.local:8083'] ## only for demo purposes don't use host.docker.internal in production
             labels:
               application: 'Notification Service'
+---
+apiVersion: v1
+kind: ConfigMap
+metadata:
+  name: prometheus-alerts
+data:
+  alerts.yml: |
+    groups:
+      - name: microservices_alerts
+        rules:
+          - alert: ServiceDown
+            expr: up == 0
+            for: 1m
+            annotations:
+              summary: "Service {{ $labels.application }} is down"
+              description: "Service {{ $labels.application }} has been down for more than 1 minute"
+
+          - alert: HighResponseTime
+            expr: rate(http_server_requests_seconds_sum{uri!="/actuator/prometheus"}[1m]) / rate(http_server_requests_seconds_count{uri!="/actuator/prometheus"}[1m]) > 0.5
+            for: 2m
+            annotations:
+              summary: "High response time on {{ $labels.application }}"
+              description: "Service response time is above 500ms"
+
+          - alert: OrderProcessingFailures
+            expr: rate(resilience4j_circuitbreaker_calls_total{kind="failed", name="inventory"}[1m]) > 0
+            for: 1m
+            annotations:
+              summary: "Order processing failures in {{ $labels.application }}"
+              description: "Circuit breaker showing failures in order processing"
+
+          - alert: LowInventoryStock
+            expr: inventory_quantity < 10
+            for: 10s
+            labels:
+              severity: warning
+            annotations:
+              summary: "Low inventory for product {{ $labels.skuCode }}"
+              description: "Product {{ $labels.skuCode }} has inventory below 10 units"

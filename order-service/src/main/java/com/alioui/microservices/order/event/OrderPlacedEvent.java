@@ -2,7 +2,6 @@ package com.alioui.microservices.order.event;
 
 import lombok.Getter;
 import lombok.Setter;
-import org.apache.avro.generic.GenericArray;
 import org.apache.avro.specific.SpecificData;
 import org.apache.avro.util.Utf8;
 import org.apache.avro.message.BinaryMessageEncoder;
@@ -13,7 +12,7 @@ import java.io.Serial;
 @Setter
 @Getter
 @org.apache.avro.specific.AvroGenerated
-public class OrderPlacedEvent extends org.apache.avro.specific.SpecificRecordBase implements org.apache.avro.specific.SpecificRecord {
+public class OrderPlacedEvent extends org.apache.avro.specific.SpecificRecordBase{
   @Serial
   private static final long serialVersionUID = 8747090203382430010L;
 
@@ -153,8 +152,7 @@ public class OrderPlacedEvent extends org.apache.avro.specific.SpecificRecordBas
    */
   @Getter
   @org.apache.avro.specific.AvroGenerated
-  public static class Builder extends org.apache.avro.specific.SpecificRecordBuilderBase<OrderPlacedEvent>
-    implements org.apache.avro.data.RecordBuilder<OrderPlacedEvent> {
+  public static class Builder extends org.apache.avro.specific.SpecificRecordBuilderBase<OrderPlacedEvent>{
 
       private CharSequence orderNumber;
       private CharSequence email;

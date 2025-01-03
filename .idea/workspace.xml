@@ -4,20 +4,7 @@
     <option name="autoReloadType" value="SELECTIVE" />
   </component>
   <component name="ChangeListManager">
-    <list default="true" id="a1f8a9c2-af92-4884-89ec-2cd7fb4b0994" name="Changes" comment="">
-      <change beforePath="$PROJECT_DIR$/.idea/compiler.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/compiler.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/.idea/misc.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/misc.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/api-gateway/src/main/resources/logback-spring.xml" beforeDir="false" afterPath="$PROJECT_DIR$/api-gateway/src/main/resources/logback-spring.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/inventory-service/src/main/resources/logback-spring.xml" beforeDir="false" afterPath="$PROJECT_DIR$/inventory-service/src/main/resources/logback-spring.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/notification-service/src/main/resources/application.properties" beforeDir="false" afterPath="$PROJECT_DIR$/notification-service/src/main/resources/application.properties" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/notification-service/src/main/resources/avro/order-placed.avsc" beforeDir="false" afterPath="$PROJECT_DIR$/notification-service/src/main/resources/avro/order-placed.avsc" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/notification-service/src/main/resources/logback-spring.xml" beforeDir="false" afterPath="$PROJECT_DIR$/notification-service/src/main/resources/logback-spring.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/order-service/src/main/java/com/alioui/microservices/order/event/OrderPlacedEvent.java" beforeDir="false" afterPath="$PROJECT_DIR$/order-service/src/main/java/com/alioui/microservices/order/event/OrderPlacedEvent.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/order-service/src/main/resources/logback-spring.xml" beforeDir="false" afterPath="$PROJECT_DIR$/order-service/src/main/resources/logback-spring.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/pom.xml" beforeDir="false" afterPath="$PROJECT_DIR$/pom.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/product-service/src/main/resources/logback-spring.xml" beforeDir="false" afterPath="$PROJECT_DIR$/product-service/src/main/resources/logback-spring.xml" afterDir="false" />
-    </list>
+    <list default="true" id="a1f8a9c2-af92-4884-89ec-2cd7fb4b0994" name="Changes" comment="" />
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
     <option name="HIGHLIGHT_NON_ACTIVE_CHANGELIST" value="false" />
@@ -39,38 +26,38 @@
     <option name="hideEmptyMiddlePackages" value="true" />
     <option name="showLibraryContents" value="true" />
   </component>
-  <component name="PropertiesComponent"><![CDATA[{
-  "keyToString": {
-    "Maven.microservices [clean,validate,install].executor": "Run",
-    "Maven.microservices [compile,-X].executor": "Run",
-    "Maven.microservices [org.springframework.boot:spring-boot-maven-plugin:3.2.4:build-image].executor": "Run",
-    "Maven.microservices [spring-boot:build-image...].executor": "Run",
-    "Maven.notification-service [clean].executor": "Run",
-    "Maven.notification-service [compile].executor": "Run",
-    "Maven.notification-service [install].executor": "Run",
-    "Maven.notification-service [validate].executor": "Run",
-    "Maven.order-service [clean,validate].executor": "Run",
-    "Maven.order-service [clean].executor": "Run",
-    "Maven.order-service [compile].executor": "Run",
-    "Maven.order-service [install].executor": "Run",
-    "RunOnceActivity.ShowReadmeOnStart": "true",
-    "dart.analysis.tool.window.visible": "false",
-    "git-widget-placeholder": "master",
-    "kotlin-language-version-configured": "true",
-    "last_opened_file_path": "C:/Users/belha/Documents/PFM/microservices-manager",
-    "node.js.detected.package.eslint": "true",
-    "node.js.detected.package.tslint": "true",
-    "node.js.selected.package.eslint": "(autodetect)",
-    "node.js.selected.package.tslint": "(autodetect)",
-    "nodejs_package_manager_path": "npm",
-    "project.structure.last.edited": "Project",
-    "project.structure.proportion": "0.15",
-    "project.structure.side.proportion": "0.3505747",
-    "settings.editor.selected.configurable": "com.github.copilot.settings.ApplicationConfigurable",
-    "show.migrate.to.gradle.popup": "false",
-    "vue.rearranger.settings.migration": "true"
+  <component name="PropertiesComponent">{
+  &quot;keyToString&quot;: {
+    &quot;Maven.microservices [clean,validate,install].executor&quot;: &quot;Run&quot;,
+    &quot;Maven.microservices [compile,-X].executor&quot;: &quot;Run&quot;,
+    &quot;Maven.microservices [org.springframework.boot:spring-boot-maven-plugin:3.2.4:build-image].executor&quot;: &quot;Run&quot;,
+    &quot;Maven.microservices [spring-boot:build-image...].executor&quot;: &quot;Run&quot;,
+    &quot;Maven.notification-service [clean].executor&quot;: &quot;Run&quot;,
+    &quot;Maven.notification-service [compile].executor&quot;: &quot;Run&quot;,
+    &quot;Maven.notification-service [install].executor&quot;: &quot;Run&quot;,
+    &quot;Maven.notification-service [validate].executor&quot;: &quot;Run&quot;,
+    &quot;Maven.order-service [clean,validate].executor&quot;: &quot;Run&quot;,
+    &quot;Maven.order-service [clean].executor&quot;: &quot;Run&quot;,
+    &quot;Maven.order-service [compile].executor&quot;: &quot;Run&quot;,
+    &quot;Maven.order-service [install].executor&quot;: &quot;Run&quot;,
+    &quot;RunOnceActivity.ShowReadmeOnStart&quot;: &quot;true&quot;,
+    &quot;dart.analysis.tool.window.visible&quot;: &quot;false&quot;,
+    &quot;git-widget-placeholder&quot;: &quot;master&quot;,
+    &quot;kotlin-language-version-configured&quot;: &quot;true&quot;,
+    &quot;last_opened_file_path&quot;: &quot;C:/Users/belha/Documents/PFM/microservices-manager&quot;,
+    &quot;node.js.detected.package.eslint&quot;: &quot;true&quot;,
+    &quot;node.js.detected.package.tslint&quot;: &quot;true&quot;,
+    &quot;node.js.selected.package.eslint&quot;: &quot;(autodetect)&quot;,
+    &quot;node.js.selected.package.tslint&quot;: &quot;(autodetect)&quot;,
+    &quot;nodejs_package_manager_path&quot;: &quot;npm&quot;,
+    &quot;project.structure.last.edited&quot;: &quot;Project&quot;,
+    &quot;project.structure.proportion&quot;: &quot;0.15&quot;,
+    &quot;project.structure.side.proportion&quot;: &quot;0.3505747&quot;,
+    &quot;settings.editor.selected.configurable&quot;: &quot;com.github.copilot.settings.ApplicationConfigurable&quot;,
+    &quot;show.migrate.to.gradle.popup&quot;: &quot;false&quot;,
+    &quot;vue.rearranger.settings.migration&quot;: &quot;true&quot;
   }
-}]]></component>
+}</component>
   <component name="RunAnythingCache">
     <option name="myCommands">
       <command value="mvn spring-boot:build-image -X" />

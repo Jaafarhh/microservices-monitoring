@@ -1,0 +1,19 @@
+global:
+  smtp_smarthost: "sandbox.smtp.mailtrap.io:2525"
+  smtp_from: "alertmanager@microservices.com"
+  smtp_auth_username: "e738a5cf93f087"
+  smtp_auth_password: "0cd693f7b4a1ae"
+  resolve_timeout: 1m
+
+route:
+  group_by: ["alertname"]
+  group_wait: 10s
+  group_interval: 10s
+  repeat_interval: 1h
+  receiver: "email-notifications"
+
+receivers:
+  - name: "email-notifications"
+    email_configs:
+      - to: "testuser@microservices.com"
+        send_resolved: true
